@@ -1,0 +1,27 @@
+<h1>Listing funding_pages</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Description</th>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @funding_pages.each do |funding_page| %>
+  <tr>
+    <td><%= funding_page.user_id %></td>
+    <td><%= funding_page.description %></td>
+    <td><%= funding_page.title %></td>
+    <td><%= link_to 'Show', funding_page %></td>
+    <td><%= link_to 'Edit', edit_funding_page_path(funding_page) %></td>
+    <td><%= link_to 'Destroy', funding_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Funding page', new_funding_page_path %>
