@@ -4,6 +4,7 @@ class CreateFundingPages < ActiveRecord::Migration
       t.integer :user_id
       t.string :description
       t.string :title
+      
 
       t.timestamps
     end

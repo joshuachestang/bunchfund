@@ -2452,3 +2452,151 @@ Served asset /funding_pages.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-24 22:08:57 -0500
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 15:07:05 -0500
+Processing by HomePagesController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered home_pages/home.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 159ms (Views: 155.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 15:07:06 -0500
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/funding_pages.css?body=1" for 127.0.0.1 at 2012-10-31 15:07:06 -0500
+Served asset /funding_pages.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 15:07:06 -0500
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:06 -0500
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/funding_pages.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:06 -0500
+Served asset /funding_pages.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:06 -0500
+Served asset /application.js - 200 OK (10ms)
+
+
+Started GET "/funding_pages/new" for 127.0.0.1 at 2012-10-31 15:07:19 -0500
+Processing by FundingPagesController#new as HTML
+  Rendered funding_pages/_form.html.erb (15.3ms)
+  Rendered funding_pages/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/funding_pages" for 127.0.0.1 at 2012-10-31 15:07:27 -0500
+Processing by FundingPagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mJPyz+s59+oNn6Vzoac18eBPiP9KDO3cAkjLhRmLPFY=", "funding_page"=>{"description"=>"Hello", "title"=>"World"}, "commit"=>"Create Funding page"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.8ms)[0m  INSERT INTO "funding_pages" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 31 Oct 2012 20:07:27 UTC +00:00], ["description", "Hello"], ["title", "World"], ["updated_at", Wed, 31 Oct 2012 20:07:27 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/funding_pages/2
+Completed 302 Found in 41ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/funding_pages/2" for 127.0.0.1 at 2012-10-31 15:07:27 -0500
+Processing by FundingPagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mFundingPage Load (0.3ms)[0m  SELECT "funding_pages".* FROM "funding_pages" WHERE "funding_pages"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered funding_pages/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/funding_pages" for 127.0.0.1 at 2012-10-31 15:07:29 -0500
+Processing by FundingPagesController#index as HTML
+  [1m[36mFundingPage Load (0.2ms)[0m  [1mSELECT "funding_pages".* FROM "funding_pages" [0m
+  Rendered funding_pages/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:29 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/funding_pages/1" for 127.0.0.1 at 2012-10-31 15:07:31 -0500
+Processing by FundingPagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFundingPage Load (0.1ms)[0m  SELECT "funding_pages".* FROM "funding_pages" WHERE "funding_pages"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered funding_pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:31 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-10-31 15:07:39 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mJPyz+s59+oNn6Vzoac18eBPiP9KDO3cAkjLhRmLPFY="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 15:07:39 -0500
+Processing by HomePagesController#home as HTML
+  Rendered home_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:39 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-31 15:07:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:07:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (2.2ms)[0m  DROP TABLE "funding_pages"
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20121025025207'[0m
+  [1m[35m (0.9ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20121023042549)
+Migrating to CreateFundingPages (20121025025207)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "funding_pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "description" varchar(255), "title" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121025025207')[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("funding_pages")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
